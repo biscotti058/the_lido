@@ -4,15 +4,9 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background: transparent;
+  background: #5ec9d8;
   padding: 12px 0;
-  transition: background 0.3s ease;
-}
-
-.header.scrolled {
-  background: rgba(94, 201, 216, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -24,12 +18,13 @@
   justify-content: space-between;
 }
 
-/* Logo - matched to design */
+/* Logo */
 .logo {
   display: flex;
   align-items: center;
   gap: 10px;
   color: white;
+  flex-shrink: 0;
 }
 
 .logo-icon svg {
@@ -61,7 +56,6 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 25px;
 }
 
 .nav-list {
@@ -85,8 +79,15 @@
   opacity: 0.8;
 }
 
+/* Header Right - Consulenza + Social */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .btn-consulenza {
-  background: var(--primary-cyan);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
   padding: 8px 18px;
   border-radius: 18px;
@@ -134,33 +135,28 @@
   height: 16px;
 }
 
-/* Header Right */
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
 /* Menu Toggle */
 .menu-toggle {
   display: none;
   flex-direction: column;
-  gap: 4px;
+  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
+  padding: 8px;
+  z-index: 1001;
 }
 
 .menu-toggle span {
-  width: 22px;
+  width: 24px;
   height: 2px;
   background: white;
   transition: all 0.3s ease;
+  border-radius: 2px;
 }
 
 .menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translate(4px, 4px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 
 .menu-toggle.active span:nth-child(2) {
@@ -168,10 +164,10 @@
 }
 
 .menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(4px, -4px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 1024px) {
   .nav {
     position: fixed;
@@ -180,12 +176,14 @@
     width: 80%;
     max-width: 320px;
     height: 100vh;
-    background: var(--primary-cyan);
+    height: 100dvh;
+    background: #5ec9d8;
     flex-direction: column;
     align-items: flex-start;
-    padding: 90px 35px 35px;
+    padding: 100px 35px 35px;
     transition: right 0.3s ease;
     box-shadow: -5px 0 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
   }
 
   .nav-open {
@@ -194,15 +192,26 @@
 
   .nav-list {
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
+    width: 100%;
   }
 
   .nav-list a {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px 0;
   }
 
   .menu-toggle {
     display: flex;
+  }
+  
+  .social-icons {
+    display: none;
+  }
+  
+  .btn-consulenza {
+    display: none;
   }
 }
 
@@ -212,15 +221,15 @@
   }
 
   .logo-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .logo-icon svg {
     width: 35px;
     height: 35px;
   }
-
-  .social-icons {
-    display: none;
+  
+  .logo-tagline {
+    font-size: 0.35rem;
   }
 }

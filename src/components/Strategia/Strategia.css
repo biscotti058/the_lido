@@ -1,4 +1,4 @@
-/* DALLA STRATEGIA ALLA CRESCITA - Exact match: sfondo BEIGE/SABBIA */
+/* DALLA STRATEGIA ALLA CRESCITA */
 .strategia {
   position: relative;
   padding: 60px 20px;
@@ -74,7 +74,6 @@
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Button - exact match: black border */
 .strategia .btn-secondary {
   background: transparent;
   color: #2c3e50;
@@ -89,31 +88,49 @@
   color: white;
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
-  .cases-grid {
-    gap: 15px;
+  .strategia {
+    padding: 40px 15px;
   }
-
-  .case-label {
-    font-size: 1.3rem;
-    bottom: 10px;
-    left: 10px;
-  }
-
+  
   .strategia .decorative-title {
     font-size: 2rem;
   }
+  
+  .strategia-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cases-grid {
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .case-label {
+    font-size: 1.2rem;
+    bottom: 10px;
+    left: 10px;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
+  .strategia .decorative-title {
+    font-size: 1.8rem;
+  }
+  
   .cases-grid {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 100%;
-    gap: 10px;
+    gap: 8px;
   }
 
   .case-label {
     font-size: 1rem;
+    bottom: 8px;
+    left: 8px;
+  }
+  
+  .case-card {
+    border-radius: 10px;
   }
 }

@@ -1,4 +1,4 @@
-/* COSA FACCIAMO - Exact match to design */
+/* COSA FACCIAMO */
 .cosa-facciamo {
   padding: 60px 20px;
   background: #5ec9d8;
@@ -68,7 +68,6 @@
   display: none;
 }
 
-/* Button exact match - black with arrow down */
 .cosa-facciamo .btn-primary {
   background: transparent;
   color: #2c3e50;
@@ -94,17 +93,37 @@
   height: 12px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .cosa-facciamo {
+    padding: 40px 15px;
+  }
+  
+  .cosa-facciamo .decorative-title {
+    font-size: 2rem;
+  }
+  
+  .cosa-facciamo-intro {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+  }
+  
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
-
-  .cosa-facciamo-card {
-    padding: 0;
+  
+  .service-item {
+    padding: 14px 20px;
   }
+  
+  .service-name {
+    font-size: 0.8rem;
+  }
+}
 
+@media (max-width: 480px) {
   .cosa-facciamo .decorative-title {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 }

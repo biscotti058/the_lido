@@ -1,5 +1,7 @@
+/* INSIEME VERSO LA TUA CRESCITA */
 .crescita {
   padding: 70px 20px;
+  background: #f7ede2;
 }
 
 .crescita-content {
@@ -28,8 +30,27 @@
   opacity: 0.85;
 }
 
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .crescita {
+    padding: 40px 15px;
+  }
+  
   .crescita .decorative-title {
     font-size: 2rem;
+  }
+  
+  .crescita-text {
+    font-size: 0.85rem;
+  }
+  
+  .crescita-text-small {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .crescita .decorative-title {
+    font-size: 1.8rem;
   }
 }

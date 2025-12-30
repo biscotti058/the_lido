@@ -41,10 +41,15 @@ const ContattiPage = () => {
       
       <div className="page-content">
         <div className="container">
-          <section className="page-section intro-section">
-            <p className="intro-text">
-              Raccontaci cosa vuoi realizzare. Siamo pronti ad ascoltarti 
-              e a costruire insieme il tuo percorso di crescita.
+          {/* Hero Text - Grande e accattivante */}
+          <section className="contatti-hero-section">
+            <h2 className="contatti-hero-title">
+              Raccontaci cosa vuoi realizzare.
+            </h2>
+            <p className="contatti-hero-text">
+              Siamo pronti ad ascoltarti e a costruire insieme il tuo percorso di crescita.
+              Una conversazione dedicata a fare chiarezza, definire le priorità ed esplorare 
+              come visione e potenziale possano tradursi in risultati concreti.
             </p>
           </section>
 

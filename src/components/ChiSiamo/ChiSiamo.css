@@ -1,4 +1,4 @@
-/* CHI SIAMO - Exact match to design */
+/* CHI SIAMO */
 .chi-siamo {
   padding: 60px 20px;
   position: relative;
@@ -53,7 +53,6 @@
   font-size: 0.85rem;
 }
 
-/* Button exact match */
 .chi-siamo-content .btn-secondary {
   background: transparent;
   color: #2c3e50;
@@ -73,11 +72,15 @@
   color: white;
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .chi-siamo {
+    padding: 40px 15px;
+  }
+  
   .chi-siamo-card {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
   .chi-siamo-content {
@@ -86,10 +89,21 @@
   }
 
   .chi-siamo-image {
-    max-height: 250px;
+    max-height: 220px;
+    border-radius: 15px;
   }
 
   .chi-siamo-content .decorative-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+  
+  .chi-siamo-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chi-siamo-content .decorative-title {
+    font-size: 1.8rem;
   }
 }

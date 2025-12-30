@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Hero.css'
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // Carousel slides - 3 different images with same content
   const slides = [
     {
       id: 1,
@@ -23,7 +23,6 @@ const Hero = () => {
     }
   ]
 
-  // Auto-slide every 7 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -34,7 +33,6 @@ const Hero = () => {
 
   return (
     <section className="hero" id="hero">
-      {/* Carousel Background */}
       <div className="hero-carousel">
         {slides.map((slide, index) => (
           <div
@@ -47,7 +45,6 @@ const Hero = () => {
         <div className="hero-overlay"></div>
       </div>
 
-      {/* Content */}
       <div className="hero-content">
         <h1 className="hero-title">
           CONSULENZA STRATEGICA<br />
@@ -58,15 +55,14 @@ const Hero = () => {
           The Lido supporta le aziende che affrontano crescita, cambiamento e decisioni complesse,
           offrendo strategia, posizionamento e consulenza per andare avanti con sicurezza.
         </p>
-        <a href="#contatti" className="btn-primary hero-cta">
+        <Link to="/contatti" className="btn-primary hero-cta">
           Prenota una consulenza
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
-        </a>
+        </Link>
       </div>
 
-      {/* Carousel Indicators */}
       <div className="hero-indicators">
         {slides.map((_, index) => (
           <button
@@ -78,7 +74,6 @@ const Hero = () => {
         ))}
       </div>
 
-      {/* Wave decoration at bottom - sand color */}
       <div className="hero-wave">
         <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
           <path

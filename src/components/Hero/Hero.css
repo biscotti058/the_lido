@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,7 +33,7 @@
   opacity: 1;
 }
 
-/* Overlay - exact cyan match */
+/* Overlay - RIMOSSO per vedere bene le foto */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -41,9 +42,9 @@
   height: 100%;
   background: linear-gradient(
     180deg,
-    rgba(94, 201, 216, 0.78) 0%,
-    rgba(74, 181, 196, 0.72) 50%,
-    rgba(94, 201, 216, 0.80) 100%
+    rgba(94, 201, 216, 0.45) 0%,
+    rgba(74, 181, 196, 0.35) 50%,
+    rgba(94, 201, 216, 0.50) 100%
   );
 }
 
@@ -65,6 +66,7 @@
   line-height: 1.15;
   margin-bottom: 1.2rem;
   letter-spacing: 0.5px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
@@ -74,14 +76,16 @@
   max-width: 550px;
   margin: 0 auto 1.8rem;
   font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-cta {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(8px);
-  border: 1.5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
   padding: 12px 28px;
   font-size: 0.85rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .hero-cta:hover {
@@ -119,7 +123,7 @@
   background: rgba(255, 255, 255, 0.6);
 }
 
-/* Wave - sand color */
+/* Wave */
 .hero-wave {
   position: absolute;
   bottom: 0;
@@ -134,28 +138,58 @@
   height: 70px;
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .hero-content {
+    padding: 0 20px;
+    margin-top: 0;
+  }
+  
   .hero-title {
     font-size: 2.2rem;
+    line-height: 1.2;
   }
 
   .hero-subtitle {
     font-size: 0.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .hero-indicators {
-    bottom: 90px;
+    bottom: 80px;
+  }
+  
+  .hero-wave svg {
+    height: 50px;
+  }
+  
+  .hero-cta {
+    padding: 10px 22px;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-title {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.75rem;
   }
 
   .hero-cta {
-    padding: 10px 22px;
-    font-size: 0.8rem;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+  }
+  
+  .hero-indicators {
+    bottom: 70px;
+    gap: 8px;
+  }
+  
+  .indicator {
+    width: 8px;
+    height: 8px;
   }
 }

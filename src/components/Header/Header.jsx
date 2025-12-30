@@ -14,8 +14,6 @@ const Header = () => {
     { name: 'Contatti', href: '/contatti' },
   ]
 
-  const isHome = location.pathname === '/'
-
   return (
     <header className="header">
       <div className="header-container">
@@ -48,15 +46,16 @@ const Header = () => {
               </li>
             ))}
           </ul>
+        </nav>
+
+        <div className="header-right">
           <Link to="/contatti" className="btn-consulenza" onClick={() => setIsMenuOpen(false)}>
             Consulenza
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </Link>
-        </nav>
-
-        <div className="header-right">
+          
           <div className="social-icons">
             <a href="#" aria-label="Facebook">
               <svg viewBox="0 0 24 24" fill="currentColor">

@@ -1,5 +1,7 @@
+/* LA NOSTRA FILOSOFIA */
 .filosofia {
   padding: 70px 20px;
+  background: #f7ede2;
 }
 
 .filosofia-grid {
@@ -44,11 +46,15 @@
   transform: scale(1.03);
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  .filosofia {
+    padding: 40px 15px;
+  }
+  
   .filosofia-grid {
     grid-template-columns: 1fr;
-    gap: 35px;
+    gap: 30px;
   }
 
   .filosofia-content {
@@ -57,10 +63,28 @@
   }
 
   .filosofia-image img {
-    height: 260px;
+    height: 250px;
   }
 
   .filosofia-content .decorative-title {
     font-size: 2rem;
+  }
+  
+  .filosofia-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .filosofia-content .decorative-title {
+    font-size: 1.8rem;
+  }
+  
+  .filosofia-image {
+    border-radius: 15px;
+  }
+  
+  .filosofia-image img {
+    height: 200px;
   }
 }

@@ -4,7 +4,7 @@
   /* Colors - exact match to design */
   --primary-cyan: #5ec9d8;
   --primary-cyan-dark: #4ab5c4;
-  --primary-cyan-light: #7dd8e3;
+  --primary-cyan-light: #7ee8f1;
   --primary-cyan-overlay: rgba(94, 201, 216, 0.75);
   --sand-light: #f7ede2;
   --sand-medium: #efe3d4;
@@ -31,6 +31,7 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -39,22 +40,27 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button {
   cursor: pointer;
   border: none;
   font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
 .container {
@@ -63,7 +69,7 @@ img {
   padding: 0 20px;
 }
 
-/* Decorative Title Style - matched to design */
+/* Decorative Title Style */
 .decorative-title {
   font-family: var(--font-decorative);
   font-size: 2.8rem;
@@ -73,7 +79,7 @@ img {
   letter-spacing: 0.5px;
 }
 
-/* Primary Button - exact match */
+/* Primary Button */
 .btn-primary {
   background: var(--primary-cyan);
   color: var(--white);
@@ -83,9 +89,11 @@ img {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(94, 201, 216, 0.25);
+  white-space: nowrap;
 }
 
 .btn-primary:hover {
@@ -97,9 +105,10 @@ img {
 .btn-primary svg {
   width: 14px;
   height: 14px;
+  flex-shrink: 0;
 }
 
-/* Secondary Button - exact match */
+/* Secondary Button */
 .btn-secondary {
   background: transparent;
   color: var(--text-dark);
@@ -110,8 +119,10 @@ img {
   font-weight: 500;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .btn-secondary:hover {
@@ -122,9 +133,10 @@ img {
 .btn-secondary svg {
   width: 12px;
   height: 12px;
+  flex-shrink: 0;
 }
 
-/* Sand texture pattern - exact match */
+/* Sand texture pattern */
 .sand-pattern {
   background-color: var(--sand-light);
   background-image: 
@@ -147,13 +159,35 @@ section {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+  :root {
+    --section-padding: 40px 15px;
+  }
+  
   .decorative-title {
     font-size: 2rem;
   }
   
-  :root {
-    --section-padding: 50px 15px;
+  .container {
+    padding: 0 15px;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 20px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .decorative-title {
+    font-size: 1.8rem;
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    padding: 10px 18px;
+    font-size: 0.75rem;
   }
 }
