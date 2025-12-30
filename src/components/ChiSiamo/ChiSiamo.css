@@ -1,0 +1,95 @@
+/* CHI SIAMO - Exact match to design */
+.chi-siamo {
+  padding: 60px 20px;
+  position: relative;
+  background: #f7ede2;
+}
+
+.chi-siamo-card {
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 40px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.chi-siamo-image {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.chi-siamo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.chi-siamo-card:hover .chi-siamo-image img {
+  transform: scale(1.03);
+}
+
+.chi-siamo-content {
+  padding: 20px 40px 20px 0;
+}
+
+.chi-siamo-content .decorative-title {
+  margin-bottom: 1rem;
+  font-size: 2.8rem;
+  color: #2c3e50;
+}
+
+.chi-siamo-content p {
+  color: #5a6c7d;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+/* Button exact match */
+.chi-siamo-content .btn-secondary {
+  background: transparent;
+  color: #2c3e50;
+  padding: 10px 24px;
+  border: 1.5px solid #2c3e50;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.chi-siamo-content .btn-secondary:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chi-siamo-card {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .chi-siamo-content {
+    padding: 0;
+    text-align: center;
+  }
+
+  .chi-siamo-image {
+    max-height: 250px;
+  }
+
+  .chi-siamo-content .decorative-title {
+    font-size: 2.2rem;
+  }
+}

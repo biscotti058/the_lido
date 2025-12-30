@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Colors - exact match to design */
+  --primary-cyan: #5ec9d8;
+  --primary-cyan-dark: #4ab5c4;
+  --primary-cyan-light: #7dd8e3;
+  --primary-cyan-overlay: rgba(94, 201, 216, 0.75);
+  --sand-light: #f7ede2;
+  --sand-medium: #efe3d4;
+  --sand-dark: #e5d6c3;
+  --white: #ffffff;
+  --dark-blue: #1e3d4a;
+  --text-dark: #2c3e50;
+  --text-light: #5a6c7d;
+  
+  /* Typography */
+  --font-decorative: 'Caveat', cursive;
+  --font-body: 'Poppins', sans-serif;
+  
+  /* Spacing */
+  --section-padding: 60px 20px;
+  --container-max: 1100px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  background: var(--white);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Decorative Title Style - matched to design */
+.decorative-title {
+  font-family: var(--font-decorative);
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Primary Button - exact match */
+.btn-primary {
+  background: var(--primary-cyan);
+  color: var(--white);
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(94, 201, 216, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--primary-cyan-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(94, 201, 216, 0.35);
+}
+
+.btn-primary svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* Secondary Button - exact match */
+.btn-secondary {
+  background: transparent;
+  color: var(--text-dark);
+  padding: 10px 24px;
+  border: 1.5px solid var(--text-dark);
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: var(--text-dark);
+  color: var(--white);
+}
+
+.btn-secondary svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Sand texture pattern - exact match */
+.sand-pattern {
+  background-color: var(--sand-light);
+  background-image: 
+    radial-gradient(ellipse at 30% 70%, rgba(239, 227, 212, 0.9) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 30%, rgba(239, 227, 212, 0.7) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(247, 237, 226, 0.95) 0%, transparent 70%);
+  position: relative;
+}
+
+/* Section styles */
+section {
+  position: relative;
+}
+
+/* Card Style */
+.card {
+  background: var(--white);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .decorative-title {
+    font-size: 2rem;
+  }
+  
+  :root {
+    --section-padding: 50px 15px;
+  }
+}

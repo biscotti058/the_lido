@@ -1,0 +1,119 @@
+/* DALLA STRATEGIA ALLA CRESCITA - Exact match: sfondo BEIGE/SABBIA */
+.strategia {
+  position: relative;
+  padding: 60px 20px;
+  background: #e8d9c5;
+  display: flex;
+  align-items: center;
+}
+
+.strategia-content {
+  text-align: center;
+}
+
+.strategia .decorative-title {
+  color: #2c3e50;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.strategia-subtitle {
+  color: #5a6c7d;
+  font-size: 0.8rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 750px;
+  margin: 0 auto 2rem;
+}
+
+.case-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  aspect-ratio: 0.85;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.case-card:hover {
+  transform: translateY(-5px);
+}
+
+.case-image {
+  width: 100%;
+  height: 100%;
+}
+
+.case-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.case-card:hover .case-image img {
+  transform: scale(1.05);
+}
+
+.case-label {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-family: var(--font-decorative);
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Button - exact match: black border */
+.strategia .btn-secondary {
+  background: transparent;
+  color: #2c3e50;
+  border: 1.5px solid #2c3e50;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-size: 0.8rem;
+}
+
+.strategia .btn-secondary:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cases-grid {
+    gap: 15px;
+  }
+
+  .case-label {
+    font-size: 1.3rem;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .strategia .decorative-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .cases-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .case-label {
+    font-size: 1rem;
+  }
+}

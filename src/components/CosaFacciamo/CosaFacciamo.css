@@ -1,0 +1,110 @@
+/* COSA FACCIAMO - Exact match to design */
+.cosa-facciamo {
+  padding: 60px 20px;
+  background: #5ec9d8;
+  position: relative;
+}
+
+.cosa-facciamo-card {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.cosa-facciamo .decorative-title {
+  margin-bottom: 0.8rem;
+  font-size: 2.8rem;
+  color: #2c3e50;
+}
+
+.cosa-facciamo-intro {
+  color: #2c3e50;
+  max-width: 550px;
+  margin: 0 auto 2.5rem;
+  font-size: 0.8rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.service-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 16px 24px;
+  background: #f7ede2;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  background: #efe3d4;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.service-arrow {
+  display: none;
+}
+
+/* Button exact match - black with arrow down */
+.cosa-facciamo .btn-primary {
+  background: transparent;
+  color: #2c3e50;
+  padding: 10px 24px;
+  border: 1.5px solid #2c3e50;
+  border-radius: 25px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+.cosa-facciamo .btn-primary:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+.cosa-facciamo .btn-primary svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cosa-facciamo-card {
+    padding: 0;
+  }
+
+  .cosa-facciamo .decorative-title {
+    font-size: 2.2rem;
+  }
+}
