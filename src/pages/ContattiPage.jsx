@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import './Pages.css'
 
 const ContattiPage = () => {
-  // Scroll to top when page loads
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
@@ -99,7 +98,7 @@ const ContattiPage = () => {
                     />
                   </div>
                 </div>
-                <div className="form-group full-width">
+                <div className="form-group">
                   <label htmlFor="messaggio">Messaggio *</label>
                   <textarea
                     id="messaggio"
